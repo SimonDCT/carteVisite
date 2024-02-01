@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>First</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+            var video = document.querySelector("#video-src");
+
+
+            window.addEventListener("click", function (event) {
+                event.stopPropagation();
+                if (video.paused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+        });
+    </script>
+
+</head>
+
+<body style="margin : 0px; overflow: hidden;">
+    <a-scene embedded arjs>
+        <a-marker preset='hiro'>
+
+
+            <a-video position="0 -2 -10" scale="3 3 3" src="/S1/test.mp4" loop="true"></a-video>
+
+
+
+
+
+        </a-marker>
+        <a-camera position="0 0 0" rotation="-40 -10 0"></a-camera>
+    </a-scene>
+
+</body>
+
+</html>
