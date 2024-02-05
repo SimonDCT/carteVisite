@@ -3,12 +3,7 @@
 <head>
     <title>First</title>
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js">
-        import 'aframe'
-        import 'aframe-gif-shader'
-    </script>
-    <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js">
-    </script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"> </script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -31,18 +26,15 @@
 </head>
 
 <body style="margin : 0px; overflow: hidden;">
-    <a-scene embedded arjs>
+    <a-scene>
         <a-marker preset='hiro'>
 
 
-            <a-video id="video-src" position="0 2 0" rotation="90 0 -180" scale="3 3 3" src="/carteVisite/S1/S1.mp4" loop="true"></a-video>
-            <a-video id="video-src" position="0 0 0" rotation="90 0 -180" scale="3 3 3" src="/carteVisite/S1/S2.mp4" loop="true"></a-video>
+            <a-video id="video-src" position="0 2 0" rotation="90 0 -180" scale="3 3 3" src="/carteVisite/S1/S1.mp4"
+                loop="true"></a-video>
+            <a-video id="video-src" position="0 0 0" rotation="90 0 -180" scale="3 3 3" src="/carteVisite/S1/S2.mp4"
+                loop="true"></a-video>
             <a-sky color="red"></a-sky>
- 
-
-            <a-scene>
-                <a-entity geometry="plane;" material="shader:gif;src:url(nyancat.gif)"></a-entity>
-            </a-scene>
 
         </a-marker>
         <a-camera position="0 0 0" rotation="0 0 0"></a-camera>
